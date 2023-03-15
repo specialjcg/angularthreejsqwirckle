@@ -1,1 +1,9 @@
+
+
 <canvas #canvas id="canvas" style="width: 100%; height:100%"></canvas>
+<button pButton type="button" label="Click" class="button-pool" (click)="getGame()"></button>
+<button   pButton type="button" label="get player2 tiles" class="button-pool" (click)="getplayer2()"></button>
+<button  *ngIf="this.show" pButton type="button" label="player2 play" class="button-pool" (click)="playPlayer2()"></button>
+<button  pButton type="button" label="player21 play" class="button-pool" (click)="getGame()"></button>
+<button pButton type="button" [label]="getscoreplayer1()" class="button-pool"></button>
+<button pButton type="button" [label]="getscoreplayer2()" class="button-pool"></button>

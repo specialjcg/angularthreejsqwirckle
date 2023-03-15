@@ -1,21 +1,26 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CubeComponent } from './cube/cube.component';
 import {HttpClientModule} from "@angular/common/http";
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CubeComponent,
-  ],
   imports: [
     BrowserModule,
-
     HttpClientModule,
+    ButtonModule,
+
+  ],
+  declarations: [
+    AppComponent,CubeComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  bootstrap: [AppComponent],
+  exports:[ButtonModule]
 })
 export class AppModule { }
